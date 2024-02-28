@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verjaardag Zoey Hehe</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+      ::-webkit-scrollbar 
+  {
+      width: 1.2em;
+  }
+  
+  ::-webkit-scrollbar-track 
+  {
+      background: #0e1111;
+  }
+  
+  
+  ::-webkit-scrollbar-thumb 
+  {
+      background: #fff;
+      border-radius: 75vw;
+      border: 0.25em solid #0e1111;
+  }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+.timeline {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 700px;
+  position: relative;
+}
+.timeline__content-title {
+  font-weight: normal;
+  font-size: 42px;
+  transition: 0.4s;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  text-shadow: 2px 2px 7px rgba(0, 0, 0, 1);
+}
+.timeline__content-desc {
+  margin: 0;
+  font-size: 22px;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, .7);
+  font-family: 'Jost', sans-serif;
+  font-weight: normal;
+  line-height: 35px;
+}
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  margin-left: -1px;
+  content: "";
+  background: rgba(255, 255, 255, .07);
+}
+@media only screen and (max-width: 767px) {
+  .timeline:before {
+    left: 40px;
+  }
+}
+.timeline-item {
+  padding: 40px 0;
+  opacity: 0.3;
+  filter: blur(2px);
+  transition: 0.5s;
+  box-sizing: border-box;
+  width: calc(50% - 40px);
+  display: flex;
+  position: relative;
+  transform: translateY(-80px);
+}
+.timeline-item:before {
+  content: attr(data-text);
+  letter-spacing: 3px;
+  width: 100%;
+  position: absolute;
+  color: rgba(255, 255, 255, .7);
+  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+  border-left: 2px solid rgba(255, 255, 255, .7);
+  top: 70%;
+  margin-top: -5px;
+  padding-left: 15px;
+  opacity: 0;
+  right: calc(-100% - 56px);
+}
+.timeline-item:nth-child(even) {
+  align-self: flex-end;
+}
+.timeline-item:nth-child(even):before {
+  right: auto;
+  text-align: right;
+  left: calc(-100% - 56px);
+  padding-left: 0;
+  border-left: none;
+  border-right: 2px solid rgba(255, 255, 255, .5);
+  padding-right: 15px;
+}
+.timeline-item--active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+.timeline-item--active:before {
+  top: 50%;
+  transition: 0.3s all 0.2s;
+  opacity: 1;
+}
+.timeline-item--active .timeline__content-title {
+  margin: -50px 0 20px 0;
+}
+@media only screen and (max-width: 767px) {
+  .timeline-item {
+    align-self: baseline !important;
+    width: 100%;
+    padding: 0 30px 150px 80px;
+  }
+  .timeline-item:before {
+    left: 10px !important;
+    padding: 0 !important;
+    top: 50px;
+    text-align: center !important;
+    width: 60px;
+    border: none !important;
+  }
+  .timeline-item:last-child {
+    padding-bottom: 40px;
+  }
+}
+.timeline__img {
+  max-width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, .4);
+  border-radius: 20px;
+}
+.timeline-container {
+  width: 100%;
+  position: relative;
+  padding: 80px 0;
+  transition: 0.3s ease 0s;
+  background-attachment: fixed;
+  background-size:cover;
+  background-position-y: -500px;
+}
+.timeline-container:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+ background: rgba(0,0,0,0.6);
+  content: "";
+}
+.timeline-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+.timeline-header__title {
+  color: #fff;
+  font-size: 58px;
+  font-family: 'Jost', sans-serif;
+  letter-spacing: 5px;
+  font-weight: normal;
+  margin: 0;
+}
+.timeline-header__subtitle {
+  color: rgba(255, 255, 255, .7);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  letter-spacing: 5px;
+  margin: 10px 0 0 0;
+  font-weight: normal;
+}
+
+    </style>
+</head>
+<body>
+     <div class="timeline-container" id="timeline-1">
+  <div class="timeline-header">
+    <h2 class="timeline-header__title">DE TIJDLIJN</h2>
+    <h3 class="timeline-header__subtitle">VAN ZOEY EN TIJN <3</h3>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item" data-text="HET EERSTE BERICHT">
+      <div class="timeline__content"><img class="timeline__img" src="./images/18dec.PNG" />
+        <h2 class="timeline__content-title">18-12-2023</h2>
+        <p class="timeline__content-desc">Dit is waar het allemaal begon. Vanaf het begin wist ik dat jij de mijne moest worden, en ik kan met trots zeggen dat dit is gelukt. Toen ik je profiel voor het eerst zag hoopte ik stiekem heel erg dat je mij ook zou liken, en toen de match er was, was mijn verlangen naar een berichtje van jou extreem hoog. Na eenmaal een berichtje van jou te hebben ontvangen, heb je mijn hart weten te veroveren, en tot de dag van vandaag word ik steeds verliefder op je.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="DE EERSTE DATE">
+      <div class="timeline__content"><img class="timeline__img" src="./images/11jan.JPG"/>
+        <h2 class="timeline__content-title">11-01-2024</h2>
+        <p class="timeline__content-desc">Na een aantal lange weken wachten, en elke dag appen konden we eindelijk op date toen je terug kwam uit China! Het waren niet de fijnste weken voor je, maar ik heb geprobeerd om er virtueel voor je te zijn in die tijd. Nadat ik je voor het eerst zag bij de tramhalte in Rotterdam, ging alles eigenlijk vanzelf. Alles voelde perfect bij jou.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="DE TWEEDE DATE">
+      <div class="timeline__content"><img class="timeline__img" src="./images/15jan.PNG"/>
+        <h2 class="timeline__content-title">15-01-2024</h2>
+        <p class="timeline__content-desc">Op de tweede date wilde je naar Eindhoven komen, zo lief van je! Lekker gegeten, met de auto rondgereden en in de avond het heel gezellig gehad op TU Eindhoven. We hadden leuke foto's gemaakt met je polaroid camera, en leuke video's opgenomen samen. Een dag om nooit te vergeten liefje!</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="MIJN VRIENDINNETJE">
+      <div class="timeline__content"><img class="timeline__img" src="./images/22jan1.png"/>
+        <h2 class="timeline__content-title">22-01-2024</h2>
+        <p class="timeline__content-desc">Dit was onze derde date, en we hadden afgesproken in Utrecht. Een heel leuke lunchplek had je uitgezocht! Ook hadden we gepoold en lekker gegeten samen. Maar natuurlijk was het einde van de avond het hoogtepunt. Hier vroeg ik of je mijn vriendinnetje wilde zijn! Zo leuk was het met jou deze dag.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="IK HOU VAN JOU">
+      <div class="timeline__content"><img class="timeline__img" src="./images/31jan.jpg"/>
+        <h2 class="timeline__content-title">31-01-2024</h2>
+        <p class="timeline__content-desc">Op deze dag was ik naar je uni gekomen, en heb ik je geholpen met het inkleuren van je tekening hihi. Hierna hadden we lekkere pho gegeten in Rotterdam, nom nom nom. Aan het einde van de avond zaten we in een tentje, en toen kwam het opeens uit je mond: ik hou van jou! Ik hou ook van jou liefje <3</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="NOM NOM NOM">
+      <div class="timeline__content"><img class="timeline__img" src="./images/6feb.jpg"/>
+        <h2 class="timeline__content-title">06-02-2024</h2>
+        <p class="timeline__content-desc">
+          We waren samen naar een dim sum restaurant geweest in Rotterdam, en ik herinner me nog dat we bijna wegwaaiden buiten, wooosh. Dit was twee dageb nadat je bij mij was geweest, en je lekkere koekjes had meegenomen, zo lief van je! Na het eten waren we bij jou thuis geweest en hadden we Valorant op je laptop gespeeld, heel leuk was dat!
+        </p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="BIJ TIJN THUIS">
+      <div class="timeline__content"><img class="timeline__img" src="./images/8feb.jpg"/>
+        <h2 class="timeline__content-title">08-02-2024</h2>
+        <p class="timeline__content-desc">Dit was de eerste keer dat je bij mij bleef slapen, en we gingen eten in Eindhoven bij Dadawan! Altijd als ik tegenover je zit terwijl we ergens eten besef ik me dat ik zo dankbaar voor je ben. Je bent zo lief en goed voor me, dankjewel liefje!</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="VALENTIJN">
+        <div class="timeline__content"><img class="timeline__img" src="./images/14feb.jpg"/>
+          <h2 class="timeline__content-title">14-02-2024</h2>
+          <p class="timeline__content-desc">Tijdens Valentijn was je bij mij langs geweest, en had je het liefste cadeautje ooit aan me gegeven! Een heel mooie blouse, en een heel schattig geknutseld kaartje. Dit kaartje staat op mijn nachtkastje, en hier kijk ik elke avond nog naar :). Het was heel fijn om Valentijn met jou door te brengen, en ik hoop dat je elk jaar mijn Valentijn bent.</p>
+        </div>
+    </div>
+    <div class="timeline-item" data-text="IN DE AUTO">
+        <div class="timeline__content"><img class="timeline__img" src="./images/18feb.jpg"/>
+          <h2 class="timeline__content-title">18-02-2024</h2>
+          <p class="timeline__content-desc">Op deze dag hadden we allebei tijd om elkaar te zien. Je was naar mij gekomen, wat heel lief van je is! We hadden gegeten in een Chinees restaurant, en daarna had je zelfs nog in de auto gereden op TU Eindhoven hihi. Je had het heel goed gedaan, maar helaas moest ik je hierna weer missen voor een aantal dagen :(</p>
+        </div>
+    </div>
+    <div class="timeline-item" data-text="MIJN PRACHTIGE MEISJE">
+        <div class="timeline__content"><img class="timeline__img" src="./images/21feb.jpg"/>
+          <h2 class="timeline__content-title">21-02-2024</h2>
+          <p class="timeline__content-desc">Ik vond dit gewoon een prachtige foto van mijn allerliefste vriendinnetje! Na mijn stage was ik naar je toe gekomen, en hadden we lekker gegeten bij een Koreaans restaurant die je had uitgekozen, nom nom nom. Hierna waren we samen met de trein gegaan, en het was heel gezellig liefje! In Tilburg had ik deze foto van je gemaakt en je bent echt de leukste vriendin die ik had kunnen wensen <3</p>
+        </div>
+    </div>
+    <div class="timeline-item" data-text="LIEVE BLOEMETJES">
+        <div class="timeline__content"><img class="timeline__img" src="./images/25feb.jpg"/>
+          <h2 class="timeline__content-title">25-02-2024</h2>
+          <p class="timeline__content-desc">Het weekend voordat mijn moeder jarig was, en je had bloemetjes meegenomen, zo lief! Je was deze avond blijven slapen omdat we allebei maandag niet op school hoefden te zijn, dus dat kwam goed uit! Voor je verjaardag is dit de laatste, maar elke keer als we wat gaan doen zal ik een nieuwe toevoegen, ik hou van jou liefje! <3</p>
+        </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+ <script>
+    
+    (function($) {
+  $.fn.timeline = function() {
+    var selectors = {
+      id: $(this),
+      item: $(this).find(".timeline-item"),
+      activeClass: "timeline-item--active",
+      img: ".timeline__img"
+    };
+    selectors.item.eq(0).addClass(selectors.activeClass);
+    selectors.id.css(
+      "background-image",
+      "url(" +
+        selectors.item
+          .first()
+          .find(selectors.img)
+          .attr("src") +
+        ")"
+    );
+    var itemLength = selectors.item.length;
+    $(window).scroll(function() {
+      var max, min;
+      var pos = $(this).scrollTop();
+      selectors.item.each(function(i) {
+        min = $(this).offset().top;
+        max = $(this).height() + $(this).offset().top;
+        var that = $(this);
+        if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+          selectors.item.removeClass(selectors.activeClass);
+          selectors.id.css(
+            "background-image",
+            "url(" +
+              selectors.item
+                .last()
+                .find(selectors.img)
+                .attr("src") +
+              ")"
+          );
+          selectors.item.last().addClass(selectors.activeClass);
+        } else if (pos <= max - 40 && pos >= min) {
+          selectors.id.css(
+            "background-image",
+            "url(" +
+              $(this)
+                .find(selectors.img)
+                .attr("src") +
+              ")"
+          );
+          selectors.item.removeClass(selectors.activeClass);
+          $(this).addClass(selectors.activeClass);
+        }
+      });
+    });
+  };
+})(jQuery);
+
+$("#timeline-1").timeline();
+
+    </script>
+</body>
+</html>
